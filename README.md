@@ -15,7 +15,7 @@ Inspired by [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift
 
 ## GIF Showcase
 Project01-SimpleStopWatch
-![](https://github.com/voidmagic/SwiftFromScratch/blob/master/Project01-SimpleStopWatch/Project-01.gif) 
+![](https://github.com/voidmagic/SwiftFromScratch/blob/master/Project01-SimpleStopWatch/showcase.gif) 
 
 project02-TipCalculator
 ![](SwiftFromScratch/Project02-TipCalculator/Project-02.gif)
