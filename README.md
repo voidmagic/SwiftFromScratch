@@ -29,5 +29,5 @@ project03-CustomFonts
 
 project04-PullToRefresh
 
-![](https://github.com/voidmagic/SwiftFromScratch/blob/master/Project03-PullToRefresh/showcase.gif)
+![](https://github.com/voidmagic/SwiftFromScratch/blob/master/Project04-PullToRefresh/showcase.gif)
 
