@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Project04-PullToRefresh
 //
-//  Created by 王迁 on 2016/11/13.
-//  Copyright © 2016年 王迁. All rights reserved.
+//  Created by VoidMagic on 2016/11/13.
+//  Copyright © 2016年 VoidMagic. All rights reserved.
 //
 
 import UIKit
