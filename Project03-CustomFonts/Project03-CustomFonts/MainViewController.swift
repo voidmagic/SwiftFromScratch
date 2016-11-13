@@ -2,8 +2,8 @@
 //  MainViewController.swift
 //  Project03-CustomFonts
 //
-//  Created by 王迁 on 2016/11/12.
-//  Copyright © 2016年 王迁. All rights reserved.
+//  Created by VoidMagic on 2016/11/12.
+//  Copyright © 2016年 VoidMagic. All rights reserved.
 //
 
 import UIKit
@@ -39,9 +39,13 @@ class MainViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = TableCellView()
-        cell.fontName = showFontsFamilies[indexPath.row]
-        return cell;
+        let cell = UITableViewCell(style: .value1, reuseIdentifier: "cell")
+        cell.textLabel?.text = "Void Magic 2016"
+        cell.detailTextLabel?.text = showFontsFamilies[indexPath.row]
+        cell.textLabel?.font = UIFont(name: showFontsFamilies[indexPath.row], size: UIFont.labelFontSize)
+        cell.detailTextLabel?.font = UIFont(name: showFontsFamilies[indexPath.row], size: UIFont.smallSystemFontSize)
+        
+        return cell
     }
     
     
