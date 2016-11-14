@@ -31,3 +31,7 @@ project04-PullToRefresh
 
 ![](https://github.com/voidmagic/SwiftFromScratch/blob/master/Project04-PullToRefresh/showcase.gif)
 
+project05-PhotoPicker
+
+![](https://github.com/voidmagic/SwiftFromScratch/blob/master/Project05-PhotoPicker/showcase.gif)
+
