@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		585809F91DD95E4D00A589D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585809F81DD95E4D00A589D1 /* AppDelegate.swift */; };
-		585809FB1DD95E4D00A589D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585809FA1DD95E4D00A589D1 /* ViewController.swift */; };
-		585809FE1DD95E4D00A589D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 585809FC1DD95E4D00A589D1 /* Main.storyboard */; };
+		585809FB1DD95E4D00A589D1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585809FA1DD95E4D00A589D1 /* MainViewController.swift */; };
 		58580A001DD95E4D00A589D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 585809FF1DD95E4D00A589D1 /* Assets.xcassets */; };
 		58580A031DD95E4D00A589D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58580A011DD95E4D00A589D1 /* LaunchScreen.storyboard */; };
+		58580A0E1DD9619D00A589D1 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58580A0D1DD9619D00A589D1 /* SnapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		585809F51DD95E4D00A589D1 /* Project05-PhotoPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project05-PhotoPicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		585809F81DD95E4D00A589D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		585809FA1DD95E4D00A589D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		585809FD1DD95E4D00A589D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		585809FA1DD95E4D00A589D1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		585809FF1DD95E4D00A589D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58580A021DD95E4D00A589D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58580A041DD95E4D00A589D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58580A0D1DD9619D00A589D1 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58580A0E1DD9619D00A589D1 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +41,7 @@
 			children = (
 				585809F71DD95E4D00A589D1 /* Project05-PhotoPicker */,
 				585809F61DD95E4D00A589D1 /* Products */,
+				58580A0C1DD9619D00A589D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +56,29 @@
 		585809F71DD95E4D00A589D1 /* Project05-PhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
+				585809FA1DD95E4D00A589D1 /* MainViewController.swift */,
+				58580A0A1DD95E6300A589D1 /* Supporting Files */,
+			);
+			path = "Project05-PhotoPicker";
+			sourceTree = "<group>";
+		};
+		58580A0A1DD95E6300A589D1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				585809F81DD95E4D00A589D1 /* AppDelegate.swift */,
-				585809FA1DD95E4D00A589D1 /* ViewController.swift */,
-				585809FC1DD95E4D00A589D1 /* Main.storyboard */,
 				585809FF1DD95E4D00A589D1 /* Assets.xcassets */,
 				58580A011DD95E4D00A589D1 /* LaunchScreen.storyboard */,
 				58580A041DD95E4D00A589D1 /* Info.plist */,
 			);
-			path = "Project05-PhotoPicker";
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		58580A0C1DD9619D00A589D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58580A0D1DD9619D00A589D1 /* SnapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +91,7 @@
 				585809F11DD95E4D00A589D1 /* Sources */,
 				585809F21DD95E4D00A589D1 /* Frameworks */,
 				585809F31DD95E4D00A589D1 /* Resources */,
+				58580A0B1DD9618200A589D1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -126,18 +144,34 @@
 			files = (
 				58580A031DD95E4D00A589D1 /* LaunchScreen.storyboard in Resources */,
 				58580A001DD95E4D00A589D1 /* Assets.xcassets in Resources */,
-				585809FE1DD95E4D00A589D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58580A0B1DD9618200A589D1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		585809F11DD95E4D00A589D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				585809FB1DD95E4D00A589D1 /* ViewController.swift in Sources */,
+				585809FB1DD95E4D00A589D1 /* MainViewController.swift in Sources */,
 				585809F91DD95E4D00A589D1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,14 +179,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		585809FC1DD95E4D00A589D1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				585809FD1DD95E4D00A589D1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		58580A011DD95E4D00A589D1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -260,6 +286,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F4673Y6NYY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Project05-PhotoPicker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pw.wangqian.Project05-PhotoPicker";
@@ -273,6 +303,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F4673Y6NYY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Project05-PhotoPicker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pw.wangqian.Project05-PhotoPicker";
