@@ -35,3 +35,8 @@ project05-PhotoPicker
 
 ![](https://github.com/voidmagic/SwiftFromScratch/blob/master/Project05-PhotoPicker/showcase.gif)
 
+project06-RandomColorization
+
+![](https://github.com/voidmagic/SwiftFromScratch/blob/master/Project06-RandomColorization/showcase.gif)
+
+

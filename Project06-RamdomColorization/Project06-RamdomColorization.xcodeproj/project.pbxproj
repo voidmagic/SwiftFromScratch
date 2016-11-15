@@ -1,0 +1,346 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		587DFA591DDB2BCA00C6636B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587DFA581DDB2BCA00C6636B /* AppDelegate.swift */; };
+		587DFA5B1DDB2BCA00C6636B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587DFA5A1DDB2BCA00C6636B /* MainViewController.swift */; };
+		587DFA601DDB2BCA00C6636B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 587DFA5F1DDB2BCA00C6636B /* Assets.xcassets */; };
+		587DFA631DDB2BCA00C6636B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 587DFA611DDB2BCA00C6636B /* LaunchScreen.storyboard */; };
+		587DFA6D1DDB321200C6636B /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587DFA6C1DDB321200C6636B /* SnapKit.framework */; };
+		587DFA701DDB32E100C6636B /* Ecstasy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 587DFA6F1DDB32E100C6636B /* Ecstasy.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		587DFA551DDB2BCA00C6636B /* Project06-RamdomColorization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project06-RamdomColorization.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		587DFA581DDB2BCA00C6636B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		587DFA5A1DDB2BCA00C6636B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		587DFA5F1DDB2BCA00C6636B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		587DFA621DDB2BCA00C6636B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		587DFA641DDB2BCA00C6636B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		587DFA6C1DDB321200C6636B /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		587DFA6F1DDB32E100C6636B /* Ecstasy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ecstasy.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		587DFA521DDB2BCA00C6636B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				587DFA6D1DDB321200C6636B /* SnapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		587DFA4C1DDB2BCA00C6636B = {
+			isa = PBXGroup;
+			children = (
+				587DFA571DDB2BCA00C6636B /* Project06-RamdomColorization */,
+				587DFA561DDB2BCA00C6636B /* Products */,
+				587DFA6B1DDB321200C6636B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		587DFA561DDB2BCA00C6636B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				587DFA551DDB2BCA00C6636B /* Project06-RamdomColorization.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		587DFA571DDB2BCA00C6636B /* Project06-RamdomColorization */ = {
+			isa = PBXGroup;
+			children = (
+				587DFA6E1DDB329900C6636B /* Supporting FIles */,
+				587DFA5A1DDB2BCA00C6636B /* MainViewController.swift */,
+				587DFA6F1DDB32E100C6636B /* Ecstasy.mp3 */,
+			);
+			path = "Project06-RamdomColorization";
+			sourceTree = "<group>";
+		};
+		587DFA6B1DDB321200C6636B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				587DFA6C1DDB321200C6636B /* SnapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		587DFA6E1DDB329900C6636B /* Supporting FIles */ = {
+			isa = PBXGroup;
+			children = (
+				587DFA581DDB2BCA00C6636B /* AppDelegate.swift */,
+				587DFA5F1DDB2BCA00C6636B /* Assets.xcassets */,
+				587DFA611DDB2BCA00C6636B /* LaunchScreen.storyboard */,
+				587DFA641DDB2BCA00C6636B /* Info.plist */,
+			);
+			name = "Supporting FIles";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		587DFA541DDB2BCA00C6636B /* Project06-RamdomColorization */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 587DFA671DDB2BCA00C6636B /* Build configuration list for PBXNativeTarget "Project06-RamdomColorization" */;
+			buildPhases = (
+				587DFA511DDB2BCA00C6636B /* Sources */,
+				587DFA521DDB2BCA00C6636B /* Frameworks */,
+				587DFA531DDB2BCA00C6636B /* Resources */,
+				587DFA6A1DDB31DE00C6636B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Project06-RamdomColorization";
+			productName = "Project06-RamdomColorization";
+			productReference = 587DFA551DDB2BCA00C6636B /* Project06-RamdomColorization.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		587DFA4D1DDB2BCA00C6636B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "王迁";
+				TargetAttributes = {
+					587DFA541DDB2BCA00C6636B = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = F4673Y6NYY;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 587DFA501DDB2BCA00C6636B /* Build configuration list for PBXProject "Project06-RamdomColorization" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 587DFA4C1DDB2BCA00C6636B;
+			productRefGroup = 587DFA561DDB2BCA00C6636B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				587DFA541DDB2BCA00C6636B /* Project06-RamdomColorization */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		587DFA531DDB2BCA00C6636B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				587DFA631DDB2BCA00C6636B /* LaunchScreen.storyboard in Resources */,
+				587DFA701DDB32E100C6636B /* Ecstasy.mp3 in Resources */,
+				587DFA601DDB2BCA00C6636B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		587DFA6A1DDB31DE00C6636B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		587DFA511DDB2BCA00C6636B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				587DFA5B1DDB2BCA00C6636B /* MainViewController.swift in Sources */,
+				587DFA591DDB2BCA00C6636B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		587DFA611DDB2BCA00C6636B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				587DFA621DDB2BCA00C6636B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		587DFA651DDB2BCA00C6636B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		587DFA661DDB2BCA00C6636B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		587DFA681DDB2BCA00C6636B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F4673Y6NYY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Project06-RamdomColorization/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pw.wangqian.Project06-RamdomColorization";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		587DFA691DDB2BCA00C6636B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F4673Y6NYY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Project06-RamdomColorization/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "pw.wangqian.Project06-RamdomColorization";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		587DFA501DDB2BCA00C6636B /* Build configuration list for PBXProject "Project06-RamdomColorization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				587DFA651DDB2BCA00C6636B /* Debug */,
+				587DFA661DDB2BCA00C6636B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		587DFA671DDB2BCA00C6636B /* Build configuration list for PBXNativeTarget "Project06-RamdomColorization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				587DFA681DDB2BCA00C6636B /* Debug */,
+				587DFA691DDB2BCA00C6636B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 587DFA4D1DDB2BCA00C6636B /* Project object */;
+}
