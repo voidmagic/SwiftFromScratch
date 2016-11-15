@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		587DFA551DDB2BCA00C6636B /* Project06-RamdomColorization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project06-RamdomColorization.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		587DFA551DDB2BCA00C6636B /* Project06-RandomColorization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project06-RandomColorization.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		587DFA581DDB2BCA00C6636B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		587DFA5A1DDB2BCA00C6636B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		587DFA5F1DDB2BCA00C6636B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,7 +41,7 @@
 		587DFA4C1DDB2BCA00C6636B = {
 			isa = PBXGroup;
 			children = (
-				587DFA571DDB2BCA00C6636B /* Project06-RamdomColorization */,
+				587DFA571DDB2BCA00C6636B /* Project06-RandomColorization */,
 				587DFA561DDB2BCA00C6636B /* Products */,
 				587DFA6B1DDB321200C6636B /* Frameworks */,
 			);
@@ -50,18 +50,19 @@
 		587DFA561DDB2BCA00C6636B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				587DFA551DDB2BCA00C6636B /* Project06-RamdomColorization.app */,
+				587DFA551DDB2BCA00C6636B /* Project06-RandomColorization.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		587DFA571DDB2BCA00C6636B /* Project06-RamdomColorization */ = {
+		587DFA571DDB2BCA00C6636B /* Project06-RandomColorization */ = {
 			isa = PBXGroup;
 			children = (
 				587DFA6E1DDB329900C6636B /* Supporting FIles */,
 				587DFA5A1DDB2BCA00C6636B /* MainViewController.swift */,
 				587DFA6F1DDB32E100C6636B /* Ecstasy.mp3 */,
 			);
+			name = "Project06-RandomColorization";
 			path = "Project06-RamdomColorization";
 			sourceTree = "<group>";
 		};
@@ -87,9 +88,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		587DFA541DDB2BCA00C6636B /* Project06-RamdomColorization */ = {
+		587DFA541DDB2BCA00C6636B /* Project06-RandomColorization */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 587DFA671DDB2BCA00C6636B /* Build configuration list for PBXNativeTarget "Project06-RamdomColorization" */;
+			buildConfigurationList = 587DFA671DDB2BCA00C6636B /* Build configuration list for PBXNativeTarget "Project06-RandomColorization" */;
 			buildPhases = (
 				587DFA511DDB2BCA00C6636B /* Sources */,
 				587DFA521DDB2BCA00C6636B /* Frameworks */,
@@ -100,9 +101,9 @@
 			);
 			dependencies = (
 			);
-			name = "Project06-RamdomColorization";
+			name = "Project06-RandomColorization";
 			productName = "Project06-RamdomColorization";
-			productReference = 587DFA551DDB2BCA00C6636B /* Project06-RamdomColorization.app */;
+			productReference = 587DFA551DDB2BCA00C6636B /* Project06-RandomColorization.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -122,7 +123,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 587DFA501DDB2BCA00C6636B /* Build configuration list for PBXProject "Project06-RamdomColorization" */;
+			buildConfigurationList = 587DFA501DDB2BCA00C6636B /* Build configuration list for PBXProject "Project06-RandomColorization" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -135,7 +136,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				587DFA541DDB2BCA00C6636B /* Project06-RamdomColorization */,
+				587DFA541DDB2BCA00C6636B /* Project06-RandomColorization */,
 			);
 		};
 /* End PBXProject section */
@@ -296,7 +297,7 @@
 				);
 				INFOPLIST_FILE = "Project06-RamdomColorization/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "pw.wangqian.Project06-RamdomColorization";
+				PRODUCT_BUNDLE_IDENTIFIER = "pw.wangqian.Project06-RandomColorization";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -313,7 +314,7 @@
 				);
 				INFOPLIST_FILE = "Project06-RamdomColorization/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "pw.wangqian.Project06-RamdomColorization";
+				PRODUCT_BUNDLE_IDENTIFIER = "pw.wangqian.Project06-RandomColorization";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -322,7 +323,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		587DFA501DDB2BCA00C6636B /* Build configuration list for PBXProject "Project06-RamdomColorization" */ = {
+		587DFA501DDB2BCA00C6636B /* Build configuration list for PBXProject "Project06-RandomColorization" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				587DFA651DDB2BCA00C6636B /* Debug */,
@@ -331,7 +332,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		587DFA671DDB2BCA00C6636B /* Build configuration list for PBXNativeTarget "Project06-RamdomColorization" */ = {
+		587DFA671DDB2BCA00C6636B /* Build configuration list for PBXNativeTarget "Project06-RandomColorization" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				587DFA681DDB2BCA00C6636B /* Debug */,

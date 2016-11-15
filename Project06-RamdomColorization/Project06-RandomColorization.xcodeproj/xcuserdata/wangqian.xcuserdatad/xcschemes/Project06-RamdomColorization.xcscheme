@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "587DFA541DDB2BCA00C6636B"
-               BuildableName = "Project06-RamdomColorization.app"
-               BlueprintName = "Project06-RamdomColorization"
-               ReferencedContainer = "container:Project06-RamdomColorization.xcodeproj">
+               BuildableName = "Project06-RandomColorization.app"
+               BlueprintName = "Project06-RandomColorization"
+               ReferencedContainer = "container:Project06-RandomColorization.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "587DFA541DDB2BCA00C6636B"
-            BuildableName = "Project06-RamdomColorization.app"
-            BlueprintName = "Project06-RamdomColorization"
-            ReferencedContainer = "container:Project06-RamdomColorization.xcodeproj">
+            BuildableName = "Project06-RandomColorization.app"
+            BlueprintName = "Project06-RandomColorization"
+            ReferencedContainer = "container:Project06-RandomColorization.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "587DFA541DDB2BCA00C6636B"
-            BuildableName = "Project06-RamdomColorization.app"
-            BlueprintName = "Project06-RamdomColorization"
-            ReferencedContainer = "container:Project06-RamdomColorization.xcodeproj">
+            BuildableName = "Project06-RandomColorization.app"
+            BlueprintName = "Project06-RandomColorization"
+            ReferencedContainer = "container:Project06-RandomColorization.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "587DFA541DDB2BCA00C6636B"
-            BuildableName = "Project06-RamdomColorization.app"
-            BlueprintName = "Project06-RamdomColorization"
-            ReferencedContainer = "container:Project06-RamdomColorization.xcodeproj">
+            BuildableName = "Project06-RandomColorization.app"
+            BlueprintName = "Project06-RandomColorization"
+            ReferencedContainer = "container:Project06-RandomColorization.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
