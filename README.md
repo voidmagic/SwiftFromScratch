@@ -13,30 +13,6 @@ Inspired by [allenwong/30DaysofSwift](https://github.com/allenwong/30DaysofSwift
 1. [Carthage](https://github.com/Carthage/Carthage)
 2. [不使用Storyboard构建IOS应用](https://voidmagic.github.io/2016/11/09/IOS-without-storyboard/)
 
-## GIF Showcase
-Project01-SimpleStopWatch
 
-![](https://github.com/voidmagic/SwiftFromScratch/blob/master/Project01-SimpleStopWatch/showcase.gif) 
-
-project02-TipCalculator
-
-![](https://github.com/voidmagic/SwiftFromScratch/blob/master/Project02-TipCalculator/showcase.gif)
-
-project03-CustomFonts
-
-![](https://github.com/voidmagic/SwiftFromScratch/blob/master/Project03-CustomFonts/showcase.gif)
-
-
-project04-PullToRefresh
-
-![](https://github.com/voidmagic/SwiftFromScratch/blob/master/Project04-PullToRefresh/showcase.gif)
-
-project05-PhotoPicker
-
-![](https://github.com/voidmagic/SwiftFromScratch/blob/master/Project05-PhotoPicker/showcase.gif)
-
-project06-RandomColorization
-
-![](https://github.com/voidmagic/SwiftFromScratch/blob/master/Project06-RandomColorization/showcase.gif)
 
 
