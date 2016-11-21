@@ -2,47 +2,53 @@
 //  MainViewController.swift
 //  Project08-CarouselEffect
 //
-//  Created by 王迁 on 2016/11/17.
-//  Copyright © 2016年 王迁. All rights reserved.
+//  Created by VoidMagic on 2016/11/17.
+//  Copyright © 2016年 VoidMagic. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: UIViewController, UICollectionViewDataSource {
+class MainViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-    private var collectionView: UICollectionView! {
-        didSet {
-            collectionView.backgroundColor = UIColor.white.withAlphaComponent(0.0)
-            collectionView.dataSource = self
-            collectionView.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        }
-    }
+    private lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        
+        let cv = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: layout)
+        cv.backgroundColor = UIColor.clear
+        cv.dataSource = self
+        cv.delegate = self
+        cv.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        return cv
+    }()
+    
+    
     
     internal var interests = [Interest]() {
         didSet {
-            collectionView?.reloadData()
-            collectionView?.scrollToItem(at: IndexPath(row: 0, section: 0) , at: .centeredHorizontally, animated: false)
+            collectionView.reloadData()
         }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    override func loadView() {
+        view = UIView(frame: UIScreen.main.bounds)
         initView()
-        
     }
+    
     
     private func initView() {
         addBackground()
-        initCollectionView()
+        collectionView.contentInset = UIEdgeInsets(top: 15, left: 10, bottom: 0, right: 15)
+        view.addSubview(collectionView)
         interests = Interest.createInterests()
     }
     
     private func addBackground() {
         let imageView = UIImageView(image: UIImage(named: "bg"))
         view.addSubview(imageView)
+        
         imageView.snp.makeConstraints {
             maker in
             maker.center.equalTo(view.snp.center)
@@ -50,29 +56,8 @@ class MainViewController: UIViewController, UICollectionViewDataSource {
         }
     }
     
-    private func initCollectionView() {
-        
-        let screenHeight = UIScreen.main.bounds.height
-        let screenWidth = UIScreen.main.bounds.width
-        
-        let itemHeight = screenHeight.divided(by: 2)
-        let itemWidth = screenWidth.subtracting(30)
-        
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: itemWidth, height: itemHeight)
-
-        collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
-        
-        view.addSubview(collectionView)
-        collectionView.snp.makeConstraints {
-            maker in
-            maker.center.equalTo(view.snp.center)
-            maker.width.equalTo(view.snp.width)
-            maker.height.equalTo(view.bounds.height.divided(by: 4).multiplied(by: 3))
-        }
-    }
     
+    // MARK: collection view datasource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return interests.count
     }
@@ -81,6 +66,15 @@ class MainViewController: UIViewController, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageCollectionViewCell
         cell.interest = interests[indexPath.row]
         return cell
+    }
+    
+    // MARK: collection view delegate flow layout
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let screenWidth = UIScreen.main.bounds.width
+        let itemWidth = screenWidth.subtracting(30)
+        let itemHeight = itemWidth
+        return CGSize(width: itemWidth, height: itemHeight)
     }
     
 }
