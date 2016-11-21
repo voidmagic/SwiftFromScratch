@@ -18,10 +18,12 @@ class MainViewController: UITableViewController {
     
     private let customFontsFamilies = ["MF JinHei (Noncommercial)", "MF TongXin (Noncommercial)", "MF ZhiHei (Noncommercial)"]
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
+    override func loadView() {
+        view = UIView(frame: UIScreen.main.bounds)
         systemFontButtonClicked()
         tableView.delaysContentTouches = false
+
     }
 
     @objc private func systemFontButtonClicked() {

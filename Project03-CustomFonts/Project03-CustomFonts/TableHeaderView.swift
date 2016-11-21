@@ -9,28 +9,38 @@
 import UIKit
 import SnapKit
 
-class TableHeaderView: UITableViewHeaderFooterView {
+class TableHeaderView: UIView {
     
-    let leftButton = UIButton(type: .system)
-    let rightButton = UIButton(type: .system)
-
+    lazy var leftButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle(ButtonNameConstants.leftButtonTitle, for: .normal)
+        return button
+    }()
+    
+    lazy var rightButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle(ButtonNameConstants.rightButtonTitle, for: .normal)
+        return button
+    }()
+    
     private struct ButtonNameConstants {
         private init() {}
         static let leftButtonTitle = "System Fonts"
         static let rightButtonTitle = "Custom Fonts"
     }
-
-    override func draw(_ rect: CGRect) {
-        
-        addLeftButton()
-        addRightButton()
-        
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.backgroundColor = UIColor(red:0.96, green:1.00, blue:0.98, alpha:1.0)
+        addSubview(leftButton)
+        addSubview(rightButton)
     }
     
-    private func addLeftButton() {
-        leftButton.setTitle(ButtonNameConstants.leftButtonTitle, for: .normal)
-        addSubview(leftButton)
-        
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
         leftButton.snp.makeConstraints {
             maker in
             maker.left.equalTo(self.snp.left)
@@ -38,12 +48,6 @@ class TableHeaderView: UITableViewHeaderFooterView {
             maker.top.equalTo(self.snp.top).offset(UIApplication.shared.statusBarFrame.height)
             maker.right.equalTo(self.snp.centerX)
         }
-    }
-    
-    private func addRightButton() {
-        rightButton.setTitle(ButtonNameConstants.rightButtonTitle, for: .normal)
-        addSubview(rightButton)
-        
         rightButton.snp.makeConstraints {
             maker in
             maker.left.equalTo(self.snp.centerX)
@@ -52,6 +56,4 @@ class TableHeaderView: UITableViewHeaderFooterView {
             maker.bottom.equalTo(self.snp.bottom)
         }
     }
-    
-
 }
