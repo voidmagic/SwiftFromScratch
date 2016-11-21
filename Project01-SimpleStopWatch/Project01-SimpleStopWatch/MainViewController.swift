@@ -11,10 +11,41 @@ import SnapKit
 
 class MainViewController: UIViewController {
 
-    private var timeLabel = UILabel()
-    private var stopButton = UIButton()
-    private var startButton = UIButton()
-    private var resetButton = UIButton(type: .system)
+    private lazy var timeLabel: UILabel = {
+        let timeLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height/2))
+        timeLabel.backgroundColor = UIColor.orange
+        timeLabel.font = UIFont(name: "Courier New", size: 120)
+        timeLabel.textColor = UIColor.darkGray
+        return timeLabel
+    }()
+    
+    private lazy var stopButton: UIButton = {
+        let stopButton = UIButton(frame: CGRect(x: self.view.frame.width/2, y: self.view.frame.height/2, width: self.view.frame.width/2, height: self.view.frame.height/2))
+        if let stopButtonImage = UIImage(named: ImageNameConstants.stopButtonImageName) {
+            stopButton.setImage(stopButtonImage, for: .normal)
+            stopButton.backgroundColor = UIColor.green
+        }
+        stopButton.addTarget(self, action: #selector(self.stopButtonClicked), for: .touchUpInside)
+        return stopButton
+    }()
+    
+    
+    private lazy var startButton: UIButton = {
+        let startButton = UIButton(frame: CGRect(x: 0, y: self.view.frame.height/2, width: self.view.frame.width/2, height: self.view.frame.height/2))
+        if let startButtonImage = UIImage(named: ImageNameConstants.startButtonImageName) {
+            startButton.setImage(startButtonImage, for: .normal)
+            startButton.backgroundColor = UIColor.purple
+        }
+        startButton.addTarget(self, action: #selector(self.startButtonClicked), for: .touchUpInside)
+        return startButton
+    }()
+    
+    private lazy var resetButton: UIButton = {
+        let resetButton = UIButton(type: .system)
+        resetButton.setTitle("Reset", for: .normal)
+        resetButton.addTarget(self, action: #selector(self.resetButtonClicked), for: .touchUpInside)
+        return resetButton
+    }()
     
     private var timeValue: Double = 0.0 {
         didSet {
@@ -31,87 +62,20 @@ class MainViewController: UIViewController {
         private init() {}
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        initView()
-    }
-    
-    private func initView() {
-        view.backgroundColor = UIColor.white
+    override func loadView() {
+        view = UIView(frame: UIScreen.main.bounds)
         
-        addTimeLabel()
-        addStopButton()
-        addStartButton()
-        addResetButton()
-     
+        view.addSubview(startButton)
+        view.addSubview(stopButton)
+        view.addSubview(timeLabel)
+        view.addSubview(resetButton)
+        
+        addResetButtonConstrains()
+        
         timeValue = 0.0
     }
     
-    private func addTimeLabel() {
-        timeLabel.backgroundColor = UIColor.orange
-        
-        view.addSubview(timeLabel)
-        
-        timeLabel.font = UIFont(name: "Courier New", size: 120)
-        timeLabel.textColor = UIColor.darkGray
-        timeLabel.snp.makeConstraints {
-            maker in
-            maker.top.equalTo(view.snp.top)
-            maker.bottom.equalTo(view.snp.centerY)
-            maker.left.equalTo(view.snp.left)
-            maker.right.equalTo(view.snp.right)
-        }
-    }
-    
-    
-    private func addStartButton() {
-        
-        if let startButtonImage = UIImage(named: ImageNameConstants.startButtonImageName) {
-            startButton.setImage(startButtonImage, for: .normal)
-            startButton.backgroundColor = UIColor.purple
-        } else {
-            // could never happen as we are sure that the image exist.
-            startButton = UIButton(type: .system)
-            startButton.setTitle("Stop", for: .normal)
-        }
-        startButton.addTarget(self, action: #selector(self.startButtonClicked), for: .touchUpInside)
-        view.addSubview(startButton)
-        startButton.snp.makeConstraints {
-            maker in
-            maker.left.equalTo(view.snp.left)
-            maker.top.equalTo(view.snp.centerY)
-            maker.right.equalTo(view.snp.centerX)
-            maker.bottom.equalTo(view.snp.bottom)
-        }
-    }
-    
-    private func addStopButton() {
-        if let stopButtonImage = UIImage(named: ImageNameConstants.stopButtonImageName) {
-            stopButton.setImage(stopButtonImage, for: .normal)
-            stopButton.backgroundColor = UIColor.green
-        } else {
-            // could never happen as we are sure that the image exist.
-            stopButton = UIButton(type: .system)
-            stopButton.setTitle("Stop", for: .normal)
-        }
-        
-        stopButton.addTarget(self, action: #selector(self.stopButtonClicked), for: .touchUpInside)
-        
-        view.addSubview(stopButton)
-        stopButton.snp.makeConstraints {
-            maker in
-            maker.right.equalTo(view.snp.right)
-            maker.top.equalTo(view.snp.centerY)
-            maker.left.equalTo(view.snp.centerX)
-            maker.bottom.equalTo(view.snp.bottom)
-        }
-    }
-    
-    private func addResetButton() {
-        resetButton.setTitle("Reset", for: .normal)
-        resetButton.addTarget(self, action: #selector(self.resetButtonClicked), for: .touchUpInside)
-        view.addSubview(resetButton)
-        
+    private func addResetButtonConstrains() {
         resetButton.snp.makeConstraints {
             maker in
             maker.top.equalTo(view).offset(30)
