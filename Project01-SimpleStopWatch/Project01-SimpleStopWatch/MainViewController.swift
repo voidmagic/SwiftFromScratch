@@ -70,12 +70,13 @@ class MainViewController: UIViewController {
         view.addSubview(timeLabel)
         view.addSubview(resetButton)
         
-        addResetButtonConstrains()
+        view.setNeedsUpdateConstraints()
         
         timeValue = 0.0
     }
     
-    private func addResetButtonConstrains() {
+    override func updateViewConstraints() {
+        super.updateViewConstraints()
         resetButton.snp.makeConstraints {
             maker in
             maker.top.equalTo(view).offset(30)

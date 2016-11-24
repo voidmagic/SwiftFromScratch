@@ -52,7 +52,6 @@
 		585809D81DD8635900A589D1 /* Project04-PullToRefresh */ = {
 			isa = PBXGroup;
 			children = (
-				585809D91DD8635900A589D1 /* AppDelegate.swift */,
 				585809DB1DD8635900A589D1 /* MainViewController.swift */,
 				585809EB1DD8637200A589D1 /* Supporting Files */,
 			);
@@ -62,6 +61,7 @@
 		585809EB1DD8637200A589D1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				585809D91DD8635900A589D1 /* AppDelegate.swift */,
 				585809E01DD8635900A589D1 /* Assets.xcassets */,
 				585809E21DD8635900A589D1 /* LaunchScreen.storyboard */,
 				585809E51DD8635900A589D1 /* Info.plist */,
@@ -296,6 +296,7 @@
 				585809EA1DD8635900A589D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

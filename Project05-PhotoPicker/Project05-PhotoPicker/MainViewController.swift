@@ -11,39 +11,28 @@ import SnapKit
 
 class MainViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    private var imageArea: UIImageView! {
-        didSet {
-            imageArea.isUserInteractionEnabled = true
-            imageArea.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectImageClicked)))
-            imageArea.backgroundColor = UIColor.orange
-            imageArea.layer.masksToBounds = true
-        }
-    }
+    
+    private lazy var imageArea: UIImageView = {
+        
+        
+        let height = self.view.bounds.height.divided(by: 2)
+        let width = self.view.bounds.width
+        let hw = CGFloat.minimum(height, width)
+        let imageArea = UIImageView(frame: CGRect(x: (width-hw)/2, y: 40, width: CGFloat.minimum(height, width), height: CGFloat.minimum(height, width)))
+        imageArea.isUserInteractionEnabled = true
+        imageArea.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectImageClicked)))
+        imageArea.backgroundColor = UIColor.orange
+        imageArea.layer.masksToBounds = true
+        imageArea.layer.cornerRadius = hw.divided(by: 2)
+        return imageArea
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initView()
-    }
-    
-    private func initView() {
-        initImageArea()
-    }
-    
-    private func initImageArea() {
-        imageArea = UIImageView()
         
         view.addSubview(imageArea)
-        imageArea.snp.makeConstraints {
-            maker in
-            let height = view.bounds.height.divided(by: 2)
-            let width = view.bounds.width
-            maker.centerX.equalTo(view.snp.centerX)
-            maker.width.equalTo(CGFloat.minimum(height, width))
-            maker.height.equalTo(CGFloat.minimum(height, width))
-            maker.top.equalTo(view.snp.top).offset(UIApplication.shared.statusBarFrame.height)
-            imageArea.layer.cornerRadius = CGFloat.minimum(height, width).divided(by: 2)
-        }
     }
+    
     
     @objc private func selectImageClicked() {
         let alert = UIAlertController(title: "更换头像", message: nil, preferredStyle: .actionSheet)
@@ -72,20 +61,9 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        var keyName = ""
         
-        switch picker.sourceType {
-        case .camera:
-            keyName = "UIImagePickerControllerOriginalImage"
-        case .photoLibrary:
-            keyName = "UIImagePickerControllerOriginalImage"
-        case .savedPhotosAlbum:
-            break
-        }
+        imageArea.image = info["UIImagePickerControllerOriginalImage"] as? UIImage
         
-        if let image = info[keyName] as? UIImage {
-            imageArea.image = image
-        }
         picker.dismiss(animated: true, completion: nil)
     }
     

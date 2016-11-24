@@ -14,12 +14,19 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         
-        let cv = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: layout)
-        cv.backgroundColor = UIColor.clear
-        cv.dataSource = self
-        cv.delegate = self
-        cv.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        return cv
+        let collectionView = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: layout)
+        collectionView.backgroundColor = UIColor.clear
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.contentInset = UIEdgeInsets(top: 15, left: 10, bottom: 0, right: 15)
+        return collectionView
+    }()
+    
+    private lazy var imageView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "bg"))
+        imageView.frame = self.view.frame
+        return imageView
     }()
     
     
@@ -34,26 +41,12 @@ class MainViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     override func loadView() {
         view = UIView(frame: UIScreen.main.bounds)
-        initView()
-    }
     
-    
-    private func initView() {
-        addBackground()
-        collectionView.contentInset = UIEdgeInsets(top: 15, left: 10, bottom: 0, right: 15)
-        view.addSubview(collectionView)
-        interests = Interest.createInterests()
-    }
-    
-    private func addBackground() {
-        let imageView = UIImageView(image: UIImage(named: "bg"))
         view.addSubview(imageView)
         
-        imageView.snp.makeConstraints {
-            maker in
-            maker.center.equalTo(view.snp.center)
-            maker.size.equalTo(view.snp.size)
-        }
+        view.addSubview(collectionView)
+        
+        interests = Interest.createInterests()
     }
     
     

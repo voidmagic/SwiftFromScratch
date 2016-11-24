@@ -12,31 +12,16 @@ import SnapKit
 
 class MainViewController: UIViewController {
 
+    // MARK: properties
+    private lazy var audioPlayer: AVPlayer = {
+        let bgMusic = Bundle.main.url(forResource: "Ecstasy", withExtension: "mp3")!
+        let audioPlayer = AVPlayer(url: bgMusic)
+        return audioPlayer
+    }()
     
-    private var audioPlayer = AVAudioPlayer()
-    
-    private let gradientLayer = CAGradientLayer()
-    
-    private var timer: Timer?
-    
-    private let playButton = UIButton()
-
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        UIApplication.shared.isStatusBarHidden = true
-        
-        initView()
-    }
-    
-    private func initView() {
-        addPlayButton()
-        initBackground()
-    }
-    
-    private func initBackground() {
-        gradientLayer.frame = view.bounds
+    private lazy var gradientLayer: CAGradientLayer = {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.bounds
         let color1 = UIColor(white: 0.5, alpha: 0.2).cgColor
         let color2 = UIColor(red: 1.0, green: 0, blue: 0, alpha: 0.4).cgColor
         let color3 = UIColor(red: 0, green: 1, blue: 0, alpha: 0.3).cgColor
@@ -47,34 +32,51 @@ class MainViewController: UIViewController {
         gradientLayer.locations = [0.10, 0.30, 0.50, 0.70, 0.90]
         gradientLayer.startPoint = CGPoint.zero
         gradientLayer.endPoint = CGPoint(x: 1, y: 1)
-        self.view.layer.addSublayer(gradientLayer)
+        return gradientLayer
+    }()
+    
+    private var timer: Timer?
+    
+    private lazy var playButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "music play"), for: .normal)
+        button.addTarget(self, action: #selector(playButtonClicked), for: .touchUpInside)
+        return button
+    }()
+
+    // MARK: status bar hidden
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
-    private func addPlayButton() {
-        playButton.setImage(UIImage(named: "music play"), for: .normal)
-        playButton.addTarget(self, action: #selector(playButtonClicked), for: .touchUpInside)
-        view.addSubview(playButton)
+    // MARK: controller life cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        view.addSubview(playButton)
+        self.view.layer.addSublayer(gradientLayer)
+        
+        view.setNeedsUpdateConstraints()
+    }
+    
+    override func updateViewConstraints() {
+        super.updateViewConstraints()
         playButton.snp.makeConstraints {
             maker in
             maker.center.equalTo(view.snp.center)
         }
     }
-    
+
+    // MARK: action handler
     @objc private func playButtonClicked() {
-        let bgMusic = NSURL(fileURLWithPath: Bundle.main.path(forResource: "Ecstasy", ofType: "mp3")!)
-        do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            try AVAudioSession.sharedInstance().setActive(true)
-            try audioPlayer = AVAudioPlayer(contentsOf: bgMusic as URL)
-            
-            audioPlayer.prepareToPlay()
+        if audioPlayer.rate != 0 && audioPlayer.error == nil {
+            // is playing
+            audioPlayer.pause()
+            timer?.invalidate()
+            timer = nil
+        } else if audioPlayer.rate == 0 && audioPlayer.error == nil {
             audioPlayer.play()
             
-        } catch let audioError as NSError {
-            print(audioError)
-        }
-        if (timer == nil) {
             timer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) {
                 _ in
                 
@@ -85,8 +87,6 @@ class MainViewController: UIViewController {
                 self.view.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: 1.0)
             }
         }
-        
     }
-
 }
 

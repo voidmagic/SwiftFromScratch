@@ -9,13 +9,8 @@
 import UIKit
 
 class ClearTableViewCell: UITableViewCell {
+    
     let gradientLayer = CAGradientLayer()
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -29,7 +24,11 @@ class ClearTableViewCell: UITableViewCell {
         gradientLayer.colors = [color1, color2, color3, color4]
         gradientLayer.locations = [0.0, 0.04, 0.95, 1.0]
         layer.insertSublayer(gradientLayer, at: 0)
-
+        
+        self.textLabel?.textColor = UIColor.white
+        self.textLabel?.backgroundColor = UIColor.clear
+        self.textLabel?.font = UIFont(name: "Avenir Next", size: 18)
+        self.selectionStyle = UITableViewCellSelectionStyle.none
         
     }
     
@@ -37,8 +36,6 @@ class ClearTableViewCell: UITableViewCell {
         super.layoutSubviews()
         gradientLayer.frame = self.bounds
     }
-    
-    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

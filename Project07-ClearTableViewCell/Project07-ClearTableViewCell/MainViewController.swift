@@ -14,7 +14,6 @@ class MainViewController: UITableViewController {
     
     private let cellIdentifier = "cell"
     
-    
     override var prefersStatusBarHidden: Bool {
         return true
     }
@@ -22,20 +21,14 @@ class MainViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.black
-        
         tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         tableView.register(ClearTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
-        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! ClearTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
         cell.textLabel?.text = tableData[indexPath.row]
-        cell.textLabel?.textColor = UIColor.white
-        cell.textLabel?.backgroundColor = UIColor.clear
-        cell.textLabel?.font = UIFont(name: "Avenir Next", size: 18)
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        
         return cell
     }
 
@@ -44,10 +37,8 @@ class MainViewController: UITableViewController {
     }
    
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-        let itemCount = tableData.count - 1
-        let color = (CGFloat(indexPath.row) / CGFloat(itemCount)) * 0.6
-        cell.backgroundColor =  UIColor(red: 1.0, green: color, blue: 0.0, alpha: 1.0)
+        let color = 0.8 * CGFloat(indexPath.row) / CGFloat(tableData.count - 1)
+        cell.backgroundColor =  UIColor(red: 0.0, green: color, blue: 1.0, alpha: 1.0)
     }
     
     

@@ -10,46 +10,47 @@ import UIKit
 import SnapKit
 
 class ImageCollectionViewCell: UICollectionViewCell {
-    private let titleLabel = UILabel()
-    private let imageView = UIImageView()
+
+    
+    private lazy var imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+    }()
+    
+    private lazy var titleLabel: UILabel = {
+        let titleLabel = UILabel()
+        titleLabel.textAlignment = .center
+        titleLabel.font = UIFont.systemFont(ofSize: 20)
+        titleLabel.backgroundColor = UIColor(red:0.71, green:0.93, blue:0.71, alpha:0.9)
+
+        return titleLabel
+    }()
     
     var interest: Interest! {
         didSet {
             imageView.image = interest.image
             titleLabel.text = interest.title
-            setNeedsDisplay()
         }
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        initImageView()
-        initTitleLabel()
+        
+        contentView.addSubview(imageView)
+        contentView.addSubview(titleLabel)
         
         self.layer.cornerRadius = 5.0
         self.clipsToBounds = true
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
-    private func initImageView() {
-        imageView.contentMode = .scaleAspectFill
-        contentView.addSubview(imageView)
+    override func layoutSubviews() {
+        super.layoutSubviews()
         imageView.snp.makeConstraints {
             maker in
             maker.center.equalTo(self.snp.center)
             maker.size.equalTo(self.snp.size)
         }
-    }
-    
-    private func initTitleLabel() {
-        contentView.addSubview(titleLabel)
-        titleLabel.textAlignment = .center
-        titleLabel.font = UIFont.systemFont(ofSize: 20)
-        titleLabel.backgroundColor = UIColor(red:0.71, green:0.93, blue:0.71, alpha:0.9)
         titleLabel.snp.makeConstraints {
             maker in
             maker.centerX.equalTo(self.snp.centerX)
@@ -57,6 +58,11 @@ class ImageCollectionViewCell: UICollectionViewCell {
             maker.bottom.equalTo(self.snp.bottom)
             maker.height.equalTo(50)
         }
+
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
 }
